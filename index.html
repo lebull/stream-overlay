@@ -1,0 +1,49 @@
+<html>
+  <header>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </header>
+
+  <body>
+    <div id="topbar">
+      <div class="item">
+        <div class="logoWrapper"><img src="img/logo.jpg" id="logo"/></div>
+        <h2>Stream Thing</h1>
+      </div>
+    </div>
+
+    <div id="filler">
+      <img src="img/maxresdefault.jpg" id="placeholder"/>
+    </div>
+
+    <div id="bottombar">
+      <div class="right item centerContent endItem" id="clock" class="centerContent">(timex)</div>
+    </div>
+
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML =
+          h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i
+        } // add zero in front of numbers < 10
+        return i;
+      }
+
+      startTime();
+
+    </script>
+
+  </body>
+
+</html>
