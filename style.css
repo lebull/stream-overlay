@@ -14,28 +14,30 @@ body {
 #topbar,
 #bottombar {
   display: block;
-  width: 100%;
-  margin-left: auto; margin-right: auto;
-  height: 20px;
+  width: 66%;
+  height: 3px;
   background-color: #132421;
   color: #DEDEFF;
   font-family: 'Chakra Petch', sans-serif;
   display: flex;
   justify-content: space-between;
-  border: solid thin  #14d114;
+  /* border: solid thin  #87150d; */
+
 }
 
 #topbar {
-  border-width: 0px 0px 5px 0px;
+  border-width: 0px 0px 4px 0px;
   align-items: flex-start;
   justify-content: flex-start;
   border-radius: 0px 0px 10px 10px;
+  align-self: flex-start;
 }
 #bottombar {
-  border-width: 5px 0px 0px 0px;
+  border-width: 4px 0px 0px 0px;
   border-radius: 10px 10px 0px 0px;
   align-items: flex-end;
   justify-content: flex-end;
+  align-self: flex-end;
 }
 
 #filler {
@@ -43,59 +45,67 @@ body {
 }
 
 .item {
-  display: flex;
-  min-height: 80px;
-  min-width: 240px;
-  background-color: #132421;
+
+  background-color: #242829;
   border-style: solid;
-  border-color: #14d114;
-  font-size: 48px;
+  border-color: #6b1616;
+  font-size: 24px;
+  overflow: hidden;
+  text-shadow: 5px 3px 10px rgba(0,0,0,1);
+
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  /* padding: 10px 30px; */
 }
 
 #topbar .item {
   border-style: solid;
-  border-width: 0px 2px 5px 2px;
-  border-radius: 0px 0px 110px 30px;
+  border-width: 0px 2px 6px 2px;
+  border-radius: 0px 0px 10px 10px;
+  vertical-align: bottom;
+  text-align: center;
 }
 
 #bottombar .item {
-  border-width: 5px 2px 0px 2px;
+  border-width: 6px 1px 0px 1px;
   border-radius: 10px 10px 0px 0px;
-  vertical-align: baseline;
-}
-
-.right.item {
-  padding-left: 80px;
-}
-
-
-#bottombar .right.item {
-  border-radius: 100px 10px 0px 0px;
-
-}
-
-.item h2{
-  margin: 0px 100px 0px 10px;
-  font-size: 56px;
-}
-
-.logowrapper {
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  margin: 5px 0px 5px 30px;
+  display:flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #clock {
-  justify-content: flex-start;
+  /* justify-self: flex-end; */
+  text-align:center;
+  letter-spacing: 4px;
+  padding: 0px 20px;
 }
 
 #logo {
-  width: 100%;
-  height: 100%;
+  width: 60px;
+  height: 60px;
+  border: solid 2px #6b1616;
+  border-radius: 100%;
+  /* margin: 5px 0px 5px 30px; */
+  box-shadow: 0px 3px 50px 10px rgba(0,0,0,0.8);
+  margin-left: 10px;
+}
+
+#titleBlock{
+  margin: 10px;
+}
+
+#titleBlock h2{
+  font-size: 48px;
+  margin: 0;
+}
+
+
+#titleBlock p{
+  font-size: 24px;
 }
 
 #placeholder {
@@ -104,4 +114,23 @@ body {
   position:absolute;
   top:0;
   z-index: -10;
+}
+
+#clock {
+  width: 150px;
+  font-family: "Open Sans";
+  font-size: 32px;
+}
+
+/* Debugging */
+
+#filler{
+  /* Comment this line to show the placeholder image */
+  visibility: hidden; 
+  display: grid;
+
+}
+#filler img{
+  max-width: 100%;
+  max-height: 100vh;
 }
